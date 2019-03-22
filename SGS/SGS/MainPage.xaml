@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SGS"
+             x:Class="SGS.MainPage">
+
+    <AbsoluteLayout>
+
+        <Image  x:Name="CampFire" 
+                Source="{local:EmbeddedImage SGS.imagesjpg.camp_fire.jpg}" 
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All" 
+                Aspect="Fill"/>
+        
+        <BoxView Color="WhiteSmoke" Opacity="0.3"
+                 AbsoluteLayout.LayoutBounds="0.5,0.5,0.7,0.8" 
+                 AbsoluteLayout.LayoutFlags="All"/>
+
+        <Grid AbsoluteLayout.LayoutBounds="0.5,0.5,0.7,0.8" AbsoluteLayout.LayoutFlags="All">
+
+            <Grid.RowDefinitions>
+                
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Image  
+                    x:Name="logoPhoto" 
+                    Source="{local:EmbeddedImage SGS.imagespng.logo.png}"
+                    Grid.Column="1"
+                    Grid.RowSpan="2" 
+                    VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                    Aspect="AspectFill"/>
+            
+            <Image 
+                    x:Name="lockPhoto"
+                    Source="{local:EmbeddedImage SGS.imagespng.password.png}"
+                    Grid.Row="2"
+                    Grid.Column="0" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            
+            <Entry
+                    Grid.Row="2" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="2" 
+                    Placeholder="UserName" 
+                    PlaceholderColor="#4b2c18"
+                    FontAttributes="Italic"/>
+
+
+
+            <Image 
+                
+                    x:Name="UsernamePhoto" 
+                    Source="{local:EmbeddedImage SGS.imagespng.username.png}"
+                    Grid.Row="3"
+                    Grid.Column="0" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            
+            <Entry  Grid.Row="3" 
+                    Grid.Column="1" 
+                    Grid.ColumnSpan="2"
+                    Placeholder="Password"
+                    PlaceholderColor="#4b2c18"
+                    FontAttributes="Italic"
+                    IsPassword="True" />
+
+
+            <Button     
+                    Grid.Row="4"
+                    Grid.Column="1" 
+                    Text="Sign in" 
+                    BorderRadius="8" 
+                    BackgroundColor="#4b2c18"
+                    TextColor="White"
+                    FontSize="13"
+                    Padding="0"
+                    Opacity="0.7"/>
+
+
+            <Button
+                 
+                     Grid.Row="6" 
+                     Grid.ColumnSpan="3"
+                     Text="Sign UP" 
+                     BackgroundColor="#4b2c18"
+                     TextColor="White"
+                     FontSize="Default"
+                     Opacity="0.7" />
+
+        </Grid>
+
+    </AbsoluteLayout>
+
+
+
+</ContentPage>
